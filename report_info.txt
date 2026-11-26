@@ -1,0 +1,57 @@
+
+============================================================
+1. URL data: rows dropped for missing values + split sizes
+============================================================
+Found: C:\Users\Aarish\Documents\Dataset\Phishing dataset\Phishing dataset\url\merged_features_final.xlsx
+Total rows in the Excel file: 60000
+Columns with missing values (count of missing cells):
+domain_age          2
+dns_resolvable      2
+num_ips             2
+ttl                 2
+num_name_servers    2
+Rows dropped for missing values: 2
+Rows kept: 59998
+url_train_manifest.csv: 41998 rows  (label_id counts: {1: 22147, 0: 19851})
+url_val_manifest.csv: 9000 rows  (label_id counts: {1: 4746, 0: 4254})
+url_test_manifest.csv: 9000 rows  (label_id counts: {1: 4746, 0: 4254})
+image_train_manifest.csv: 4487 rows  (label_id counts: {0: 3117, 1: 1370})
+image_test_manifest.csv: 1326 rows  (label_id counts: {0: 1091, 1: 235})
+aligned_image_url_manifest.csv: 4046 rows  (label_id counts: {0: 4025, 1: 21})
+
+============================================================
+2. URL test confusion matrix (best saved checkpoint)
+============================================================
+Test samples: 9000
+(rows = true class, columns = predicted class, order = [legitimate, phishing])
+URL metrics: {'accuracy': 0.9893333333333333, 'precision': 0.9976455479452054, 'recall': 0.9820901812052254, 'f1': 0.9898067530261202}
+
+============================================================
+3. Laptop CPU and RAM, software versions
+============================================================
+CPU: AMD Ryzen 5 5600H with Radeon Graphics          | cores=6 | threads=12
+RAM: 7.3 GB
+OS: Windows-11-10.0.26200-SP0
+Python: 3.14.0
+PyTorch: 2.14.1+cpu  (CUDA available: False)
+
+============================================================
+4. Saved checkpoints (files only; see note on image epoch)
+============================================================
+image_model_best.pt: 99.1 MB, last saved 2026-09-26 18:12
+url_model_best.pt: 0.4 MB, last saved 2026-09-26 15:47
+text_model_best.pt: 267.6 MB, last saved 2026-09-27 00:18
+fusion_model_best.pt: 100.1 MB, last saved 2026-09-26 20:58
+Note: the checkpoint stores only weights, not the epoch number. The epoch
+is only in the training log line '-> New best val F1 ... checkpoint saved.'
+
+============================================================
+5. Email CSVs: row counts and any readme/licence files
+============================================================
+final_cleaned_safe_1.csv: 4992 rows  labels: {'ham': 4991}
+final_cleaned_phis1.csv: 4938 rows  labels: {'spam': 4938}
+final_cleaned_phis2.csv: 4865 rows  labels: {'spam': 4865}
+final_cleaned_phis_3.csv: 4952 rows  labels: {'spam': 4952}
+final_cleaned_phis_4.csv: 4957 rows  labels: {'spam': 4957}
+Total email rows across the five CSVs: 24704
+Readme / licence / note files at the top of the Dataset folder: none

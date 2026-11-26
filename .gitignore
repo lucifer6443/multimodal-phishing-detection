@@ -1,0 +1,17 @@
+.venv/
+.venv-1/
+__pycache__/
+*.pyc
+checkpoints/
+manifests/*.pkl
+data/raw/
+*.zip
+*.pt
+*.pth
+out.txt
+debug_features.py
+debug2.py
+app1_backup.py
+.claude/
+.agents/
+.env
